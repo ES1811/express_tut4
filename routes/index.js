@@ -16,8 +16,9 @@ router.get("/", function (req, res, next) {
     }
     const people = JSON.parse(data);
     console.log(people);
+    const activeUser = "admin"
     //read people file and render it as people
-    res.render("index", { title: "Express", people: people[0].name});
+    res.render("index", { title: "Express", people: people, activeUser: activeUser});
   });
 });
 
